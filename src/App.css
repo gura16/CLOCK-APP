@@ -265,6 +265,11 @@ hr {
     text-align: left;
   }
 
+  .timediv {
+    display: flex;
+    gap: 50px;
+  }
+
   .bst {
     font-family: "Inter";
     font-size: 32px;

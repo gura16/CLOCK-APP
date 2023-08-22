@@ -1,10 +1,27 @@
-import React from "react";
 import "./App.css";
+import React, { useState, useEffect } from "react";
 import refresh from "./image/icon-refresh.svg";
 import sun from "./image/icon-sun.svg";
 import down from "./image/icon-arrow-down.svg";
 
 function App() {
+  const [localTime, setLocalTime] = useState(new Date());
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setLocalTime(new Date());
+    }, 1000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
+  const formattedLocalTime = localTime.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+
   return (
     <div className="APP">
       <div className="container1">
@@ -23,7 +40,7 @@ function App() {
           </h2>
         </div>
         <div className="timediv">
-          <p className="time">11:37</p>
+          <p className="time">{formattedLocalTime}</p>
           <p className="bst">BST</p>
         </div>
         <div className="infodiv">
