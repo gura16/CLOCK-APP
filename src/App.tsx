@@ -18,7 +18,9 @@ function App() {
       <div className="container2">
         <div className="morningdiv">
           <img className="sun" src={sun} />
-          <h2>GOOD MORNING</h2>
+          <h2>
+            GOOD MORNING <span className="currently">IT’S CURRENTLY</span>
+          </h2>
         </div>
         <div className="timediv">
           <p className="time">11:37</p>
@@ -35,21 +37,26 @@ function App() {
         </div>
       </div>
       <div className="container3">
-        <div className="timezonediv">
-          <p className="times">CURRENT TIMEZONE</p>
-          <p className="numbers">Europe/London</p>
+        <div className="firstdiv">
+          <div className="timezonediv">
+            <p className="times">CURRENT TIMEZONE</p>
+            <p className="numbers">Europe/London</p>
+          </div>
+          <div className="dayyeardiv">
+            <p className="times">Day of the year</p>
+            <p className="numbers">295</p>
+          </div>
         </div>
-        <div className="dayyeardiv">
-          <p className="times">Day of the year</p>
-          <p className="numbers">295</p>
-        </div>
-        <div className="dayweekdiv">
-          <p className="times">Day of the week</p>
-          <p className="numbers">5</p>
-        </div>
-        <div className="numberdiv">
-          <p className="times">Week number</p>
-          <p className="numbers">42</p>
+        <hr className="hr"></hr>
+        <div className="seconddiv">
+          <div className="dayweekdiv">
+            <p className="times">Day of the week</p>
+            <p className="numbers">5</p>
+          </div>
+          <div className="numberdiv">
+            <p className="times">Week number</p>
+            <p className="numbers">42</p>
+          </div>
         </div>
       </div>
     </div>
